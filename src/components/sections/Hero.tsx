@@ -26,8 +26,11 @@ export default function Hero() {
       intro
         .from(q("[data-word] > span"), { yPercent: 110, duration: 1.6, stagger: 0.12 }, 0.1)
         .from(q("[data-rock]"), { scale: 0.82, autoAlpha: 0, rotate: -8, duration: 2.2 }, 0.2)
-        .from(q("[data-card='l']"), { xPercent: -80, rotate: mobile ? 0 : -35, autoAlpha: 0, duration: 1.8 }, 0.5)
-        .from(q("[data-card='r']"), { xPercent: 80, rotate: mobile ? 0 : 35, autoAlpha: 0, duration: 1.8 }, 0.5)
+        .from(
+          mobile ? [] : q("[data-card]"),
+          { xPercent: (i) => (i ? 80 : -80), rotate: (i) => (i ? 35 : -35), autoAlpha: 0, duration: 1.8 },
+          0.5,
+        )
         .from(q("[data-fadeup]"), { y: 30, autoAlpha: 0, duration: 1.2, stagger: 0.1 }, 0.9)
         .from(q("[data-curve]"), { autoAlpha: 0, duration: 2 }, 0.6);
 
@@ -41,11 +44,10 @@ export default function Hero() {
         // phones: the two cards stay upright and slide into place as they scroll into view
         q("[data-card]").forEach((el, i) => {
           gsap.from(el, {
-            y: 90,
-            rotate: i ? 6 : -6,
-            autoAlpha: 0.2,
+            y: 70,
+            rotate: i ? 4 : -4,
             ease: "none",
-            scrollTrigger: { trigger: el, start: "top 98%", end: "top 62%", scrub: 1 },
+            scrollTrigger: { trigger: el, start: "top 100%", end: "top 70%", scrub: 0.6 },
           });
         });
       } else {
