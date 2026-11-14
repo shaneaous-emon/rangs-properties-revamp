@@ -34,9 +34,7 @@ re-based, and each section's CSS module has its own tablet/mobile rules.
 ## Fonts
 
 - **Stack Sans Headline** loads from Google Fonts via `next/font`.
-- **Voyage**, the display serif, is a commercial font and is **not included**. Put the licensed
-  `Voyage-Regular.woff2` file in `public/fonts/` and it is picked up automatically. Until then,
-  Playfair Display is used as the fallback.
+- **Voyage** (Sensatype Studio) lives in `public/fonts/Voyage-Regular.woff2`. It was supplied under a personal/demo licence, so a **commercial licence is required before the public launch** (https://sensatype.com/product/). Playfair Display is the fallback.
 
 ## Assets
 

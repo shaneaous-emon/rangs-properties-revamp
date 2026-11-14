@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 /*
- * Voyage is the display face used in the Figma file. It is a commercial
- * font, so it is not bundled. Drop the licensed files into /public/fonts
- * (Voyage-Regular.woff2) and they will be picked up automatically;
- * until then the Playfair Display fallback is used.
+ * Voyage (Sensatype Studio) is the display face used in the Figma file.
+ * The bundled WOFF2 is converted unmodified from the demo TTF and is for
+ * demo / preview use only — buy a commercial licence from sensatype.com
+ * before the public launch. Playfair Display is the fallback.
  */
 @font-face {
   font-family: "Voyage";
