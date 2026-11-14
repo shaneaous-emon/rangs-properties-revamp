@@ -1,0 +1,300 @@
+/* Hero + "Explore Possibilities" intro. Canvas: 1920 x 2149 design px. */
+.hero {
+  position: relative;
+  height: calc(2149 * var(--u));
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(198, 120, 70, 0) 0%, rgba(15, 11, 7, 0) 100%),
+    linear-gradient(174.7deg, #c6a76a -40%, #7d4729 5%, #2a1a10 22%, #0a0c0f 34%);
+  isolation: isolate;
+}
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: calc(1920 * var(--u));
+  height: 100%;
+  transform: translateX(-50%);
+}
+.abs {
+  position: absolute;
+}
+
+.texture {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: calc(1080 * var(--u));
+  mix-blend-mode: hue;
+  opacity: 0.9;
+}
+.screen {
+  position: absolute;
+  inset: calc(255 * var(--u)) 0 auto 0;
+  height: calc(853 * var(--u));
+  background-image: url("/img/hero/image-screen.webp");
+  background-size: calc(1361 * var(--u)) calc(583 * var(--u));
+  background-repeat: repeat;
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+.dome {
+  left: 50%;
+  top: calc(882 * var(--u));
+  width: calc(4569 * var(--u));
+  height: calc(3334 * var(--u));
+  margin-left: calc(-2284.5 * var(--u));
+  border-radius: 50%;
+  background: #0f0b08;
+  box-shadow: 0 calc(-40 * var(--u)) calc(120 * var(--u)) rgba(0, 0, 0, 0.35);
+}
+
+.word {
+  position: absolute;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: calc(200 * var(--u));
+  line-height: 1.33;
+  white-space: nowrap;
+  color: #fff;
+  will-change: transform;
+}
+.wArchitecture {
+  left: calc(287 * var(--u));
+  top: calc(165 * var(--u));
+}
+.wBeyond {
+  left: calc(842 * var(--u));
+  top: calc(346 * var(--u));
+}
+.wExpectations {
+  left: calc(422 * var(--u));
+  top: calc(537 * var(--u));
+  z-index: 3;
+}
+.swash {
+  left: calc(813 * var(--u));
+  top: calc(467 * var(--u));
+  width: calc(517 * var(--u));
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.rock {
+  left: calc(422 * var(--u));
+  top: calc(528 * var(--u));
+  width: calc(1055 * var(--u));
+  height: calc(1055 * var(--u));
+  z-index: 2;
+  will-change: transform;
+}
+.rock img {
+  object-fit: cover;
+}
+.curve {
+  left: calc(722.5 * var(--u));
+  top: calc(28 * var(--u));
+  width: calc(885.7 * var(--u));
+  height: calc(1080 * var(--u));
+  z-index: 2;
+}
+.tagline {
+  left: calc(517 * var(--u));
+  top: calc(449 * var(--u));
+  width: calc(193 * var(--u));
+  margin: 0;
+  font-size: calc(16 * var(--u));
+  font-weight: 300;
+  line-height: 1.3;
+  text-transform: uppercase;
+  z-index: 3;
+}
+.fade {
+  left: 0;
+  top: calc(717 * var(--u));
+  width: 100%;
+  height: calc(947 * var(--u));
+  background: linear-gradient(177.1deg, rgba(14, 10, 6, 0) 31.4%, #0f0b07 75.6%);
+  z-index: 3;
+  pointer-events: none;
+}
+.cta {
+  left: calc(842 * var(--u));
+  top: calc(873 * var(--u));
+  width: calc(279 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(23 * var(--u));
+  z-index: 4;
+}
+.cta p {
+  width: calc(239 * var(--u));
+  margin: 0;
+  font-size: calc(16 * var(--u));
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* rotated project cards */
+.card {
+  width: calc(349.85 * var(--u));
+  height: calc(513.87 * var(--u));
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  z-index: 4;
+  will-change: transform;
+  box-shadow: 0 calc(30 * var(--u)) calc(80 * var(--u)) rgba(0, 0, 0, 0.45);
+}
+.cardLeft {
+  left: calc(-6.5 * var(--u));
+  top: calc(662.9 * var(--u));
+  transform: rotate(-15deg);
+}
+.cardRight {
+  left: calc(1544.5 * var(--u));
+  top: calc(662.5 * var(--u));
+  transform: rotate(15deg);
+}
+.cardImgLeft {
+  position: absolute;
+  top: -1.6%;
+  left: -66%;
+  width: 205.2%;
+  height: 104.8%;
+  max-width: none;
+}
+.cardImgRight {
+  position: absolute;
+  inset: 0 -5.6% -1% -5.6%;
+  object-fit: cover;
+}
+
+/* explore intro */
+.exploreCurve {
+  left: calc(168 * var(--u));
+  top: calc(1322 * var(--u));
+  width: calc(1420 * var(--u));
+  height: calc(1080 * var(--u));
+  z-index: 3;
+}
+.wExplore {
+  left: calc(360 * var(--u));
+  top: calc(1583 * var(--u));
+  z-index: 3;
+}
+.wPossibilities {
+  left: calc(630 * var(--u));
+  top: calc(1787 * var(--u));
+  z-index: 3;
+}
+.exploreFade {
+  left: 0;
+  top: calc(1714 * var(--u));
+  width: 100%;
+  height: calc(688 * var(--u));
+  background: linear-gradient(182.9deg, rgba(28, 20, 14, 0) 16.3%, #0f0b07 48.4%);
+  z-index: 4;
+  pointer-events: none;
+}
+.exploreSub {
+  left: calc(668 * var(--u));
+  top: calc(2061 * var(--u));
+  width: calc(240 * var(--u));
+  margin: 0;
+  font-size: calc(24 * var(--u));
+  line-height: 1.5;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+/* ---------- tablet / mobile ---------- */
+@media (max-width: 767px) {
+  .stage {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+  .hero {
+    height: calc(2050 * var(--u));
+  }
+  .word {
+    font-size: calc(104 * var(--u));
+  }
+  .wArchitecture {
+    left: calc(30 * var(--u));
+    top: calc(210 * var(--u));
+  }
+  .wBeyond {
+    left: auto;
+    right: calc(30 * var(--u));
+    top: calc(330 * var(--u));
+  }
+  .wExpectations {
+    left: calc(30 * var(--u));
+    top: calc(450 * var(--u));
+  }
+  .swash,
+  .curve {
+    display: none;
+  }
+  .rock {
+    left: calc(-80 * var(--u));
+    top: calc(640 * var(--u));
+    width: calc(920 * var(--u));
+    height: calc(920 * var(--u));
+  }
+  .tagline {
+    left: calc(30 * var(--u));
+    top: calc(150 * var(--u));
+    width: auto;
+    font-size: 12px;
+  }
+  .tagline br {
+    display: none;
+  }
+  .cta {
+    left: calc(30 * var(--u));
+    top: calc(960 * var(--u));
+    width: auto;
+  }
+  .cta p {
+    width: 220px;
+    font-size: 13px;
+  }
+  .cardLeft {
+    left: calc(-130 * var(--u));
+    top: calc(1180 * var(--u));
+  }
+  .cardRight {
+    left: calc(540 * var(--u));
+    top: calc(1160 * var(--u));
+  }
+  .dome {
+    top: calc(1000 * var(--u));
+  }
+  .fade {
+    top: calc(900 * var(--u));
+  }
+  .wExplore {
+    left: calc(30 * var(--u));
+    top: calc(1640 * var(--u));
+  }
+  .wPossibilities {
+    left: calc(30 * var(--u));
+    top: calc(1770 * var(--u));
+  }
+  .exploreFade {
+    top: calc(1760 * var(--u));
+  }
+  .exploreSub {
+    left: calc(30 * var(--u));
+    top: calc(1940 * var(--u));
+    width: auto;
+    font-size: 14px;
+  }
+  .exploreCurve {
+    left: calc(-200 * var(--u));
+    top: calc(1300 * var(--u));
+  }
+}

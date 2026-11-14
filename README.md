@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RANGS Properties — Homepage revamp
 
-## Getting Started
-
-First, run the development server:
+Next.js 16 (App Router) + Tailwind CSS 4 + GSAP/ScrollTrigger + Lenis, built from the Figma file
+"RANGS Properties Limited → Web UI v1.0 → Desktop".
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Sections
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Section | Component | Figma node | Motion reference (Figma annotation) |
+| --- | --- | --- | --- |
+| Header + menu | `components/Header.tsx` | button variants `Btn`, `Frame 2`, `Residential`, `Commercial` | letter-wave hover |
+| Hero + Explore Possibilities | `sections/Hero.tsx` | `21039:1404` | obsidianassembly.com |
+| Mosaic → project slider | `sections/Projects.tsx` | `Commercial` variants 1–5 | pyzhevsky.estate/spaces |
+| More Than Spaces | `sections/About.tsx` | `21115:719` | |
+| Stats strip | `sections/Stats.tsx` | `slider auto` | air.pro |
+| Why us | `sections/WhyUs.tsx` | `Why us` variants 1–3 | springs.estate/design |
+| Project map | _not built yet_ | `21039:1580` | planned for a later phase |
+| Gallery | `sections/Gallery.tsx` | `Gallery 4` variants 1–3 | pyzhevsky.estate/spaces |
+| Testimonials | `sections/Stories.tsx` | `21088:3336` | |
+| News | `sections/News.tsx` | `21088:3451` | |
+| Footer | `components/Footer.tsx` | `21039:1700` | |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Layout system
 
-## Learn More
+The design is drawn on a 1920px canvas. `--u` (in `globals.css`) equals one design pixel, so a value
+like `calc(200 * var(--u))` scales the 1920 layout proportionally. Below 1024px and 768px `--u` is
+re-based, and each section's CSS module has its own tablet/mobile rules.
 
-To learn more about Next.js, take a look at the following resources:
+## Fonts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Stack Sans Headline** loads from Google Fonts via `next/font`.
+- **Voyage**, the display serif, is a commercial font and is **not included**. Put the licensed
+  `Voyage-Regular.woff2` file in `public/fonts/` and it is picked up automatically. Until then,
+  Playfair Display is used as the fallback.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Assets
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All images were exported from Figma into `public/img/<section>/` and converted to WebP.

@@ -1,0 +1,89 @@
+/* Stats strip — canvas 1920 x 976, auto-scrolling cards (Figma: "slider auto"). Reference: air.pro */
+.stats {
+  position: relative;
+  height: calc(976 * var(--u));
+  min-height: 560px;
+  margin-top: calc(56 * var(--u));
+  overflow: hidden;
+  background: var(--c-ink);
+}
+.bg {
+  position: absolute;
+  inset: calc(30 * var(--u)) 0 0 0;
+  overflow: hidden;
+}
+.bg img {
+  object-fit: cover;
+  will-change: transform;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.21);
+  mix-blend-mode: multiply;
+}
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(181.2deg, #0f0b07 11.5%, rgba(15, 11, 7, 0) 133.6%);
+}
+.viewport {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(258 * var(--u));
+  height: max(400px, calc(537 * var(--u)));
+  overflow: hidden;
+}
+.track {
+  display: flex;
+  gap: calc(24 * var(--u));
+  width: max-content;
+  margin-left: calc(-22 * var(--u));
+  padding-right: calc(24 * var(--u));
+  will-change: transform;
+}
+.card {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: max(270px, calc(432 * var(--u)));
+  height: max(470px, calc(623 * var(--u)));
+  padding: calc(67 * var(--u)) calc(102 * var(--u)) calc(63 * var(--u)) calc(62 * var(--u));
+  padding-bottom: max(90px, calc(101 * var(--u)));
+  border: 1px solid rgba(198, 167, 106, 0.04);
+  background: rgba(15, 10, 6, 0.29);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: background 0.5s;
+}
+.card:hover {
+  background: rgba(15, 10, 6, 0.55);
+}
+.num {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: max(48px, calc(80 * var(--u)));
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.label {
+  margin: calc(6 * var(--u)) 0 0;
+  font-size: max(13px, calc(20 * var(--u)));
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.desc {
+  width: max(200px, calc(309 * var(--u)));
+  margin: 0;
+  color: var(--c-mute);
+  font-size: max(12px, calc(18 * var(--u)));
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+}

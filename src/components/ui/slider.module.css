@@ -1,0 +1,48 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: calc(51 * var(--u));
+}
+.rail {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: #4e4e4e;
+  overflow: hidden;
+}
+.thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background: var(--c-orange);
+  transition:
+    transform 0.9s var(--ease-in-out),
+    width 0.9s var(--ease-in-out);
+}
+.arrows {
+  display: flex;
+  gap: calc(24 * var(--u));
+}
+
+/* shared slider track helpers */
+.viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.viewport:active {
+  cursor: grabbing;
+}
+.track {
+  display: flex;
+  width: max-content;
+  transition: transform 1s var(--ease-in-out);
+  will-change: transform;
+}
+
+@media (max-width: 767px) {
+  .controls {
+    gap: 24px;
+  }
+}

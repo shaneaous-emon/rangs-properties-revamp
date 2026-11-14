@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="129" height="60.2606" viewBox="0 0 129 60.2606" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Quote">
+<mask id="stroke0_0_190" maskUnits="userSpaceOnUse" x="0" y="0" width="61" height="61" fill="black">
+<rect fill="white" width="61" height="61"/>
+<path d="M1 58.5254L59.3838 24.6985V1H1V58.5254Z"/>
+</mask>
+<path id="Path 35" d="M1 58.5254L59.3838 24.6985V1H1V58.5254Z" stroke-width="2" stroke="url(#paint0_linear_0_190)" mask="url(#stroke0_0_190)"/>
+<mask id="stroke1_0_190" maskUnits="userSpaceOnUse" x="68.6162" y="8.46197e-05" width="61" height="61" fill="black">
+<rect fill="white" x="68.6162" y="8.46197e-05" width="61" height="61"/>
+<path d="M69.6162 58.5255L128 24.6986V1.00008H69.6162V58.5255Z"/>
+</mask>
+<path id="Path 5761" d="M69.6162 58.5255L128 24.6986V1.00008H69.6162V58.5255Z" stroke-width="2" stroke="url(#paint1_linear_0_190)" mask="url(#stroke1_0_190)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_190" x1="30.1919" y1="1" x2="30.1919" y2="58.5254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F15A22"/>
+<stop offset="1" stop-color="#481F11"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_190" x1="98.8081" y1="1.00008" x2="98.8081" y2="58.5255" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F15A22"/>
+<stop offset="1" stop-color="#481F11"/>
+</linearGradient>
+</defs>
+</svg>

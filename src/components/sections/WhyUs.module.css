@@ -1,0 +1,213 @@
+/* Why us — canvas 1920 x 1100, pinned 3-step story. Reference: springs.estate/design */
+.why {
+  position: relative;
+  background: var(--c-ink-3);
+}
+.pin {
+  position: relative;
+  height: calc(1100 * var(--u));
+  max-height: 100svh;
+  min-height: 620px;
+  overflow: hidden;
+}
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(1920 * var(--u));
+  height: calc(1100 * var(--u));
+  transform: translate(-50%, -50%);
+}
+.screen {
+  position: absolute;
+  inset: 9.73% 49.38% 0 0;
+  background-image: url("/img/why/image-screen.webp");
+  background-size: calc(1361 * var(--u)) calc(583 * var(--u));
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+.eyebrow {
+  position: absolute;
+  left: calc(68 * var(--u));
+  top: calc(103 * var(--u));
+  margin: 0;
+}
+.clip {
+  position: absolute;
+  overflow: hidden;
+}
+.track {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+.titles {
+  left: calc(217 * var(--u));
+  top: calc(320 * var(--u));
+  width: calc(600 * var(--u));
+  height: calc(208 * var(--u));
+}
+.titles .track > p {
+  flex: none;
+  height: calc(268 * var(--u));
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: calc(80 * var(--u));
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.paras {
+  left: calc(217 * var(--u));
+  top: calc(755 * var(--u));
+  width: calc(449 * var(--u));
+  height: calc(118 * var(--u));
+}
+.paras .track > p {
+  flex: none;
+  height: calc(165 * var(--u));
+  margin: 0;
+  color: var(--c-mute);
+  font-size: calc(18 * var(--u));
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.rail {
+  position: absolute;
+  left: calc(824 * var(--u));
+  top: calc(341 * var(--u));
+  width: 1px;
+  height: calc(509 * var(--u));
+  background: rgba(255, 255, 255, 0.2);
+}
+.railFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: calc(129 * var(--u));
+  background: #e65516;
+  will-change: transform;
+}
+.steps {
+  position: absolute;
+  left: calc(846 * var(--u));
+  top: calc(341 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(8 * var(--u));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: max(11px, calc(14 * var(--u)));
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.35);
+}
+.steps li {
+  transition: color 0.4s;
+}
+.steps li[data-on="true"] {
+  color: #fff;
+}
+.media {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(952 * var(--u));
+  height: calc(1100 * var(--u));
+  overflow: hidden;
+  background: #222;
+}
+.mediaTrack {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+.shot {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.shot img {
+  object-fit: cover;
+  will-change: transform;
+}
+.shot:nth-child(1) img {
+  object-position: 50% 0%;
+}
+.shot:nth-child(2) img {
+  object-position: 50% 100%;
+}
+.shot:nth-child(3) img {
+  object-position: 50% 100%;
+}
+.rock {
+  position: absolute;
+  left: calc(700 * var(--u));
+  top: calc(903 * var(--u));
+  width: calc(336 * var(--u));
+  height: calc(224 * var(--u));
+  filter: blur(2px);
+  z-index: 2;
+  will-change: transform;
+}
+.rock img {
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .pin {
+    height: 100svh;
+  }
+  .stage {
+    width: 100vw;
+    height: 100svh;
+  }
+  .media {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 46%;
+  }
+  .screen {
+    inset: 46% 0 0 0;
+  }
+  .eyebrow {
+    left: 20px;
+    top: calc(46% + 24px);
+  }
+  .titles {
+    left: 20px;
+    top: calc(46% + 70px);
+    width: calc(100% - 40px);
+    height: 100px;
+  }
+  .titles .track > p {
+    height: 120px;
+    font-size: 38px;
+  }
+  .paras {
+    left: 20px;
+    top: calc(46% + 190px);
+    width: calc(100% - 40px);
+    height: 130px;
+  }
+  .paras .track > p {
+    height: 150px;
+    font-size: 13px;
+  }
+  .rail,
+  .steps {
+    display: none;
+  }
+  .rock {
+    left: auto;
+    right: -40px;
+    top: calc(46% - 70px);
+    width: 160px;
+    height: 107px;
+  }
+}

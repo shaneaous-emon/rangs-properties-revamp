@@ -1,0 +1,192 @@
+/* "More Than Spaces. A Way of Living." — canvas 1920 x 1377 (overlaps the previous section by 60px) */
+.about {
+  position: relative;
+  height: calc(1377 * var(--u));
+  margin-top: calc(-60 * var(--u));
+  background: var(--c-ink);
+  overflow: hidden;
+}
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: calc(1920 * var(--u));
+  height: 100%;
+  transform: translateX(-50%);
+}
+.abs {
+  position: absolute;
+}
+.orb {
+  left: calc(465.5 * var(--u));
+  top: calc(269.5 * var(--u));
+  width: calc(989 * var(--u));
+  height: calc(989 * var(--u));
+}
+.title,
+.title2 {
+  position: absolute;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: calc(200 * var(--u));
+  line-height: 1.33;
+  white-space: nowrap;
+}
+.title {
+  left: calc(47 * var(--u));
+  top: calc(129 * var(--u));
+}
+.title2 {
+  left: calc(435 * var(--u));
+  top: calc(333 * var(--u));
+  background: linear-gradient(227.4deg, #ff8e43 42.3%, #393027 103.6%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+.halo {
+  left: calc(854 * var(--u));
+  top: calc(433 * var(--u));
+  width: calc(241 * var(--u));
+  height: auto;
+}
+.halo2 {
+  left: calc(767 * var(--u));
+  top: calc(464 * var(--u));
+  width: calc(219 * var(--u));
+  height: auto;
+  transform: rotate(-35.68deg);
+}
+.curve {
+  left: calc(32 * var(--u));
+  top: 0;
+  width: calc(1654 * var(--u));
+  height: calc(1241 * var(--u));
+  z-index: 2;
+  pointer-events: none;
+}
+.rocks {
+  left: calc(197 * var(--u));
+  top: calc(482 * var(--u));
+  width: calc(1452 * var(--u));
+  height: calc(869 * var(--u));
+  z-index: 2;
+}
+.rocks img {
+  object-fit: cover;
+}
+.fade {
+  left: 0;
+  top: calc(669 * var(--u));
+  width: 100%;
+  height: calc(708 * var(--u));
+  background: linear-gradient(178.9deg, rgba(22, 16, 10, 0) 5.8%, #0f0b07 60.1%);
+  z-index: 3;
+}
+.copyWrap {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: calc(1920 * var(--u));
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+.copyWrap > * {
+  pointer-events: auto;
+}
+.copy {
+  position: absolute;
+  top: calc(1000 * var(--u));
+  margin: 0;
+  font-size: calc(24 * var(--u));
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase;
+  z-index: 4;
+}
+.copyL {
+  left: calc(213 * var(--u));
+  width: calc(735 * var(--u));
+}
+.copyR {
+  left: calc(975 * var(--u));
+  width: calc(735 * var(--u));
+}
+.btn {
+  left: calc(975 * var(--u));
+  top: calc(1172 * var(--u));
+  z-index: 4;
+}
+
+@media (max-width: 767px) {
+  .copyWrap {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+  .about {
+    height: auto;
+    padding: calc(120 * var(--u)) 20px 80px;
+  }
+  .stage {
+    position: relative;
+    left: auto;
+    width: 100%;
+    height: calc(1100 * var(--u));
+    transform: none;
+  }
+  .title {
+    left: 0;
+    top: 0;
+    font-size: calc(118 * var(--u));
+    white-space: normal;
+    line-height: 1.1;
+  }
+  .title2 {
+    left: 0;
+    top: calc(290 * var(--u));
+    font-size: calc(118 * var(--u));
+    white-space: normal;
+    line-height: 1.1;
+  }
+  .orb {
+    left: calc(-80 * var(--u));
+    top: calc(260 * var(--u));
+    width: calc(860 * var(--u));
+    height: calc(860 * var(--u));
+  }
+  .rocks {
+    left: calc(-200 * var(--u));
+    top: calc(450 * var(--u));
+    width: calc(1100 * var(--u));
+    height: calc(660 * var(--u));
+  }
+  .fade {
+    top: calc(700 * var(--u));
+    height: calc(400 * var(--u));
+  }
+  .halo,
+  .halo2,
+  .curve {
+    display: none;
+  }
+  .copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin-top: 24px;
+    font-size: 15px;
+  }
+  .btn {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-top: 32px;
+  }
+}
