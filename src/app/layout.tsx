@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Italiana, Stack_Sans_Headline } from "next/font/google";
+import { Playfair_Display, Stack_Sans_Headline } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
@@ -9,8 +9,8 @@ const stack = Stack_Sans_Headline({
   weight: ["200", "300", "400", "500"],
 });
 
-// Closest free match to the Figma display face "Voyage" (see globals.css)
-const display = Italiana({
+// Free stand-in for the Figma display face "Voyage" (VJ Type, commercial) — see globals.css
+const display = Playfair_Display({
   variable: "--font-display-face",
   subsets: ["latin"],
   weight: ["400"],

@@ -34,7 +34,7 @@ re-based, and each section's CSS module has its own tablet/mobile rules.
 ## Fonts
 
 - **Stack Sans Headline** loads from Google Fonts via `next/font`.
-- **Display face:** Figma uses *Voyage*, a commercial font. The site uses **Italiana** (Google Fonts, free), the closest match. With a licensed Voyage file, add an `@font-face` in `globals.css` and put it first in `--font-display`.
+- **Display face:** Figma uses *Voyage* (VJ Type, commercial). The site uses **Playfair Display** (Google Fonts, free) as a stand-in. With a licensed Voyage file, add an `@font-face` in `globals.css` and put it first in `--font-display`.
 
 ## Assets
 

@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
 /*
- * The Figma file uses "Voyage" (a commercial display serif). Until a licensed
- * copy is supplied, Italiana — the closest free match in weight, width and
- * contrast — is used. To switch, add an @font-face here and put its family
- * first in --font-display.
+ * Figma's display face is "Voyage" by VJ Type (commercial, not bundled).
+ * Playfair Display is the free stand-in. To use the real font, add an
+ * @font-face for it here and put its family first in --font-display.
  */
 
 :root {
