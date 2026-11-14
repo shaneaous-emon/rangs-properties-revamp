@@ -263,8 +263,8 @@
   .map {
     position: relative;
     left: 0;
-    height: 64svh;
-    min-height: 420px;
+    height: 62svh;
+    min-height: 400px;
   }
   .fadeLeft {
     display: none;
@@ -282,11 +282,15 @@
     position: relative;
     left: 0;
     width: 100%;
-    height: 260px;
-    padding: 30px 20px 120px;
+    height: 300px;
+    padding: 36px 20px 100px;
+    scroll-snap-type: y proximity;
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 14%, #000 80%, transparent);
+    mask-image: linear-gradient(180deg, transparent, #000 14%, #000 80%, transparent);
   }
   .list li {
     height: 52px;
+    scroll-snap-align: center;
   }
   .item {
     font-size: 34px;
@@ -295,7 +299,7 @@
     position: absolute;
     left: 16px !important;
     right: 16px;
-    top: calc(max(64svh, 420px) - 140px) !important;
+    top: calc(max(62svh, 400px) - 132px) !important;
     bottom: auto;
     display: grid;
     grid-template-columns: 120px 1fr;

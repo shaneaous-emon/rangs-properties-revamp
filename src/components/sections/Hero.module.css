@@ -216,7 +216,7 @@
     transform: none;
   }
   .hero {
-    height: calc(2050 * var(--u));
+    height: calc(2440 * var(--u));
   }
   .word {
     font-size: calc(104 * var(--u));
@@ -263,12 +263,21 @@
     font-size: 13px;
   }
   .cardLeft {
-    left: calc(-130 * var(--u));
-    top: calc(1180 * var(--u));
+    left: calc(30 * var(--u));
+    top: calc(1290 * var(--u));
+    transform: none;
   }
   .cardRight {
-    left: calc(540 * var(--u));
-    top: calc(1160 * var(--u));
+    left: calc(380 * var(--u));
+    top: calc(1400 * var(--u));
+    transform: none;
+  }
+  .cardImgLeft {
+    left: -12%;
+    width: 130%;
+    height: 100%;
+    top: 0;
+    object-fit: cover;
   }
   .dome {
     top: calc(1000 * var(--u));
@@ -278,23 +287,23 @@
   }
   .wExplore {
     left: calc(30 * var(--u));
-    top: calc(1640 * var(--u));
+    top: calc(2020 * var(--u));
   }
   .wPossibilities {
     left: calc(30 * var(--u));
-    top: calc(1770 * var(--u));
+    top: calc(2150 * var(--u));
   }
   .exploreFade {
-    top: calc(1760 * var(--u));
+    top: calc(2100 * var(--u));
   }
   .exploreSub {
     left: calc(30 * var(--u));
-    top: calc(1940 * var(--u));
+    top: calc(2330 * var(--u));
     width: auto;
     font-size: 14px;
   }
   .exploreCurve {
     left: calc(-200 * var(--u));
-    top: calc(1300 * var(--u));
+    top: calc(1700 * var(--u));
   }
 }

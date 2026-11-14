@@ -19,13 +19,15 @@ export default function Hero() {
     const ctx = gsap.context(() => {
       const q = gsap.utils.selector(root);
 
+      const mobile = window.innerWidth < 1024;
+
       // ---- intro
       const intro = gsap.timeline({ defaults: { ease: "expo.out" } });
       intro
         .from(q("[data-word] > span"), { yPercent: 110, duration: 1.6, stagger: 0.12 }, 0.1)
         .from(q("[data-rock]"), { scale: 0.82, autoAlpha: 0, rotate: -8, duration: 2.2 }, 0.2)
-        .from(q("[data-card='l']"), { xPercent: -80, rotate: -35, autoAlpha: 0, duration: 1.8 }, 0.5)
-        .from(q("[data-card='r']"), { xPercent: 80, rotate: 35, autoAlpha: 0, duration: 1.8 }, 0.5)
+        .from(q("[data-card='l']"), { xPercent: -80, rotate: mobile ? 0 : -35, autoAlpha: 0, duration: 1.8 }, 0.5)
+        .from(q("[data-card='r']"), { xPercent: 80, rotate: mobile ? 0 : 35, autoAlpha: 0, duration: 1.8 }, 0.5)
         .from(q("[data-fadeup]"), { y: 30, autoAlpha: 0, duration: 1.2, stagger: 0.1 }, 0.9)
         .from(q("[data-curve]"), { autoAlpha: 0, duration: 2 }, 0.6);
 
@@ -35,8 +37,21 @@ export default function Hero() {
       gsap.to(q(".".concat(s.wArchitecture)), { xPercent: -18, ease: "none", scrollTrigger: st });
       gsap.to(q(".".concat(s.wBeyond)), { xPercent: 22, ease: "none", scrollTrigger: st });
       gsap.to(q(".".concat(s.wExpectations)), { xPercent: -10, ease: "none", scrollTrigger: st });
-      gsap.to(q("[data-card='l']"), { yPercent: -45, rotate: -24, ease: "none", scrollTrigger: st });
-      gsap.to(q("[data-card='r']"), { yPercent: -60, rotate: 26, ease: "none", scrollTrigger: st });
+      if (mobile) {
+        // phones: the two cards stay upright and slide into place as they scroll into view
+        q("[data-card]").forEach((el, i) => {
+          gsap.from(el, {
+            y: 90,
+            rotate: i ? 6 : -6,
+            autoAlpha: 0.2,
+            ease: "none",
+            scrollTrigger: { trigger: el, start: "top 98%", end: "top 62%", scrub: 1 },
+          });
+        });
+      } else {
+        gsap.to(q("[data-card='l']"), { yPercent: -45, rotate: -24, ease: "none", scrollTrigger: st });
+        gsap.to(q("[data-card='r']"), { yPercent: -60, rotate: 26, ease: "none", scrollTrigger: st });
+      }
 
       // ---- explore title: words slide in from opposite sides
       const ex = {
