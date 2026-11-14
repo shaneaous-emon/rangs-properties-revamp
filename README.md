@@ -34,7 +34,7 @@ re-based, and each section's CSS module has its own tablet/mobile rules.
 ## Fonts
 
 - **Stack Sans Headline** loads from Google Fonts via `next/font`.
-- **Voyage** (Sensatype Studio) lives in `public/fonts/Voyage-Regular.woff2`. It was supplied under a personal/demo licence, so a **commercial licence is required before the public launch** (https://sensatype.com/product/). Playfair Display is the fallback.
+- **Display face:** Figma uses *Voyage*, a commercial font. The site uses **Italiana** (Google Fonts, free), the closest match. With a licensed Voyage file, add an `@font-face` in `globals.css` and put it first in `--font-display`.
 
 ## Assets
 

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Stack_Sans_Headline } from "next/font/google";
+import { Italiana, Stack_Sans_Headline } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
@@ -9,9 +9,9 @@ const stack = Stack_Sans_Headline({
   weight: ["200", "300", "400", "500"],
 });
 
-// Fallback for the commercial "Voyage" display face (see globals.css)
-const voyageFallback = Playfair_Display({
-  variable: "--font-voyage-fallback",
+// Closest free match to the Figma display face "Voyage" (see globals.css)
+const display = Italiana({
+  variable: "--font-display-face",
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${stack.variable} ${voyageFallback.variable}`}>
+    <html lang="en" className={`${stack.variable} ${display.variable}`}>
       <body>
         <SmoothScroll />
         {children}

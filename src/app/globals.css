@@ -1,21 +1,11 @@
 @import "tailwindcss";
 
 /*
- * Voyage (Sensatype Studio) is the display face used in the Figma file.
- * The bundled WOFF2 is converted unmodified from the demo TTF and is for
- * demo / preview use only — buy a commercial licence from sensatype.com
- * before the public launch. Playfair Display is the fallback.
+ * The Figma file uses "Voyage" (a commercial display serif). Until a licensed
+ * copy is supplied, Italiana — the closest free match in weight, width and
+ * contrast — is used. To switch, add an @font-face here and put its family
+ * first in --font-display.
  */
-@font-face {
-  font-family: "Voyage";
-  src:
-    local("Voyage"),
-    local("Voyage Regular"),
-    url("/fonts/Voyage-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   /* Design is drawn on a 1920px canvas: 1 design px = 1 --u */
@@ -38,7 +28,7 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
 
-  --font-display: "Voyage", var(--font-voyage-fallback), "Times New Roman", serif;
+  --font-display: var(--font-display-face), "Times New Roman", serif;
   --font-body: var(--font-stack), "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -50,7 +40,6 @@
 
 @theme inline {
   --font-sans: var(--font-body);
-  --font-display: var(--font-display);
 }
 
 html {
