@@ -122,7 +122,7 @@
   z-index: 4;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .copyWrap {
     position: static;
     width: auto;

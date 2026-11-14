@@ -119,7 +119,7 @@ export default function WhyUs() {
             <div className={s.mediaTrack} data-media>
               {STEPS.map((st, i) => (
                 <div key={st.img} className={s.shot} style={{ top: `${i * 100}%` }} data-shot>
-                  <Image src={st.img} alt={st.title.join(" ")} fill sizes="(max-width: 767px) 100vw, 50vw" />
+                  <Image src={st.img} alt={st.title.join(" ")} fill sizes="(max-width: 1023px) 100vw, 50vw" />
                 </div>
               ))}
             </div>

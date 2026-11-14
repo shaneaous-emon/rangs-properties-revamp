@@ -74,7 +74,7 @@ export default function Hero() {
         <img className={`${s.abs} ${s.swash}`} src="/img/hero/beyond-swash.svg" alt="" width={517} height={198} />
 
         <div className={`${s.abs} ${s.rock}`} data-rock>
-          <Image src="/img/hero/rock.webp" alt="" fill sizes="(max-width: 767px) 120vw, 55vw" preload />
+          <Image src="/img/hero/rock.webp" alt="" fill sizes="(max-width: 1023px) 120vw, 55vw" preload />
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={`${s.abs} ${s.curve}`} src="/img/hero/curve.svg" alt="" data-curve width={886} height={1081} />

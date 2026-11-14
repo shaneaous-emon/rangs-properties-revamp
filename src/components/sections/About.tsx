@@ -85,7 +85,7 @@ export default function About() {
           height={1241}
         />
         <div className={`${s.abs} ${s.rocks}`} data-rocks>
-          <Image src="/img/about/rocks.webp" alt="" fill sizes="(max-width: 767px) 140vw, 76vw" />
+          <Image src="/img/about/rocks.webp" alt="" fill sizes="(max-width: 1023px) 140vw, 76vw" />
         </div>
         <div className={`${s.abs} ${s.fade}`} aria-hidden />
       </div>

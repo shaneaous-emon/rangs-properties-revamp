@@ -132,7 +132,7 @@ export default function News() {
                     </p>
                   </div>
                   <div className={s.thumb}>
-                    <Image src={p.img} alt="" fill sizes="(max-width: 767px) 78vw, 31vw" draggable={false} />
+                    <Image src={p.img} alt="" fill sizes="(max-width: 1023px) 78vw, 31vw" draggable={false} />
                   </div>
                 </a>
               </article>

@@ -41,7 +41,7 @@
   will-change: transform;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .controls {
     gap: 24px;
   }

@@ -8,6 +8,7 @@ import WhyUs from "@/components/sections/WhyUs";
 import Gallery from "@/components/sections/Gallery";
 import Stories from "@/components/sections/Stories";
 import News from "@/components/sections/News";
+import ProjectMap from "@/components/sections/ProjectMap";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         <About />
         <Stats />
         <WhyUs />
-        {/* TODO: Project map section (Figma "Frame 1171276621") — to be built in a later phase */}
+        <ProjectMap />
         <Gallery />
         <Stories />
         <News />

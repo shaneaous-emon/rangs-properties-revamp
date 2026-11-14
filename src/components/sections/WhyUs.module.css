@@ -157,7 +157,7 @@
   object-fit: cover;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .pin {
     height: 100svh;
   }

@@ -19,7 +19,7 @@ npm run build && npm start
 | More Than Spaces | `sections/About.tsx` | `21115:719` | |
 | Stats strip | `sections/Stats.tsx` | `slider auto` | air.pro |
 | Why us | `sections/WhyUs.tsx` | `Why us` variants 1–3 | springs.estate/design |
-| Project map | _not built yet_ | `21039:1580` | planned for a later phase |
+| Project map | `sections/ProjectMap.tsx` | `21039:1580` | azure.sa — MapLibre + OpenFreeMap, data from interactive-map-module |
 | Gallery | `sections/Gallery.tsx` | `Gallery 4` variants 1–3 | pyzhevsky.estate/spaces |
 | Testimonials | `sections/Stories.tsx` | `21088:3336` | |
 | News | `sections/News.tsx` | `21088:3451` | |

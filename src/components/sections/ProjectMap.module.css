@@ -1,0 +1,316 @@
+/* Project map — Figma "Frame 1171276621", canvas 1920 x 1100. Reference: azure.sa */
+.section {
+  position: relative;
+  height: calc(1100 * var(--u));
+  min-height: 640px;
+  overflow: hidden;
+  background: #1c1a18;
+  isolation: isolate;
+}
+
+/* ---------- map ---------- */
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(413 * var(--u));
+  right: 0;
+}
+.map :global(.maplibregl-canvas) {
+  outline: none;
+}
+.map :global(.maplibregl-ctrl-attrib) {
+  background: rgba(28, 26, 24, 0.6) !important;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 10px;
+}
+.map :global(.maplibregl-ctrl-attrib a) {
+  color: rgba(255, 255, 255, 0.6);
+}
+.map :global(.maplibregl-ctrl-attrib-button) {
+  filter: invert(1);
+}
+.fadeLeft {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(412 * var(--u));
+  width: calc(490 * var(--u));
+  background: linear-gradient(90deg, #1c1a18 18%, rgba(28, 26, 24, 0) 82%);
+  pointer-events: none;
+  z-index: 2;
+}
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(708 * var(--u));
+  background: linear-gradient(90deg, rgba(28, 26, 24, 0) 30%, #1c1a18 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+.loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+/* ---------- markers ---------- */
+.pin {
+  position: relative;
+  display: block;
+  width: max(26px, calc(35 * var(--u)));
+  height: max(44px, calc(59 * var(--u)));
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 5.3px rgba(7, 7, 7, 0.66));
+  transition:
+    transform 0.6s var(--ease-out),
+    opacity 0.4s;
+  transform-origin: 50% 100%;
+}
+.pin:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+.pinImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s;
+}
+.pinActiveImg {
+  opacity: 0;
+}
+.glow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: calc(607 * var(--u));
+  height: calc(607 * var(--u));
+  min-width: 300px;
+  min-height: 300px;
+  transform: translate(-50%, 50%) scale(0.3);
+  opacity: 0;
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+  transition:
+    opacity 0.8s,
+    transform 1.2s var(--ease-out);
+}
+.pin[data-active="true"] {
+  transform: scale(1.61);
+  z-index: 3;
+}
+.pin[data-active="true"] .pinActiveImg {
+  opacity: 1;
+}
+.pin[data-active="true"] .pinIdle {
+  opacity: 0;
+}
+.pin[data-active="true"] .glow {
+  opacity: 1;
+  transform: translate(-50%, 50%) scale(0.62);
+}
+.pin[data-dim="true"] {
+  opacity: 0.55;
+}
+
+/* ---------- list ---------- */
+.list {
+  position: absolute;
+  z-index: 3;
+  left: calc(71 * var(--u));
+  top: 0;
+  bottom: 0;
+  width: calc(800 * var(--u));
+  margin: 0;
+  padding: calc(42 * var(--u)) 0 calc(400 * var(--u));
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-width: none;
+  overscroll-behavior: contain;
+  -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent);
+  mask-image: linear-gradient(180deg, #000 82%, transparent);
+}
+.list::-webkit-scrollbar {
+  display: none;
+}
+.list li {
+  height: calc(124 * var(--u));
+}
+.item {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: rgba(168, 126, 94, 0.36);
+  font-family: var(--font-display);
+  font-size: calc(80 * var(--u));
+  line-height: 1.3;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
+}
+.item [data-long] {
+  font-size: 0.8em;
+}
+.item:hover {
+  color: rgba(220, 180, 150, 0.7);
+}
+.item[data-active="true"] {
+  color: #fff;
+  transform: translateX(calc(12 * var(--u)));
+}
+
+/* ---------- card ---------- */
+.card {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: max(260px, calc(413 * var(--u)));
+  border: 1px solid #fcfcfc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f5f5f5;
+  box-shadow: 0 4px 10.8px rgba(0, 0, 0, 0.83);
+  color: #2a2a2a;
+  text-decoration: none;
+  will-change: transform;
+  transition:
+    opacity 0.5s,
+    box-shadow 0.4s;
+}
+.card[data-hidden="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+}
+.cardImg {
+  position: relative;
+  height: max(150px, calc(243 * var(--u)));
+  overflow: hidden;
+  background: #8f8f8f;
+}
+.cardImg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+.card:hover .cardImg img {
+  transform: scale(1.06);
+}
+.cardBody {
+  padding: calc(28 * var(--u)) calc(27 * var(--u)) calc(30 * var(--u));
+}
+.cardTitle {
+  margin: 0 0 calc(15 * var(--u));
+  font-family: var(--font-display);
+  font-size: max(24px, calc(40 * var(--u)));
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--c-rust);
+  opacity: 0.8;
+  font-size: max(12px, calc(16 * var(--u)));
+  font-weight: 200;
+  line-height: 1.5;
+}
+.cardMeta img {
+  width: 9px;
+  height: 9px;
+}
+.cardAnim {
+  animation: cardIn 0.7s var(--ease-out);
+}
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+    scale: 0.97;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .map {
+    position: relative;
+    left: 0;
+    height: 64svh;
+    min-height: 420px;
+  }
+  .fadeLeft {
+    display: none;
+  }
+  .fadeRight {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    width: auto;
+    height: 90px;
+    background: linear-gradient(180deg, #1c1a18, rgba(28, 26, 24, 0));
+  }
+  .list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 260px;
+    padding: 30px 20px 120px;
+  }
+  .list li {
+    height: 52px;
+  }
+  .item {
+    font-size: 34px;
+  }
+  .card {
+    position: absolute;
+    left: 16px !important;
+    right: 16px;
+    top: calc(max(64svh, 420px) - 140px) !important;
+    bottom: auto;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    width: auto;
+    transform: none !important;
+  }
+  .cardImg {
+    height: 100%;
+    min-height: 110px;
+  }
+  .cardBody {
+    padding: 14px 16px;
+  }
+  .cardTitle {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+}

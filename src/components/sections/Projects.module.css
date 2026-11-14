@@ -233,7 +233,7 @@
   opacity: 0.8;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .viewport {
     height: 100svh;
   }

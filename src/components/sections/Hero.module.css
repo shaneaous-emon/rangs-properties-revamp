@@ -209,7 +209,7 @@
 }
 
 /* ---------- tablet / mobile ---------- */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .stage {
     left: 0;
     width: 100%;

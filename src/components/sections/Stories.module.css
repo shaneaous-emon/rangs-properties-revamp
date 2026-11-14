@@ -128,7 +128,7 @@
   margin: calc(97 * var(--u)) calc(60 * var(--u)) 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .stories {
     padding: 90px 0 60px;
   }

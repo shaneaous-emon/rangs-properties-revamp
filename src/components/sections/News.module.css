@@ -136,7 +136,7 @@
   margin: calc(91 * var(--u)) calc(60 * var(--u)) 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .news {
     padding: 100px 0 70px;
   }

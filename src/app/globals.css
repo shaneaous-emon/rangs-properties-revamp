@@ -44,12 +44,7 @@
 
 @media (max-width: 1023px) {
   :root {
-    --u: calc(100vw / 1180);
-  }
-}
-@media (max-width: 767px) {
-  :root {
-    --u: calc(100vw / 760);
+    --u: calc(min(100vw, 900px) / 760);
   }
 }
 
